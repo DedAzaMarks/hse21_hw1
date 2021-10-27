@@ -5,10 +5,10 @@ ln -s /usr/share/data-minor-bioinf/assembly/oilMP_S4_L001_R1_001.fastq
 ln -s /usr/share/data-minor-bioinf/assembly/oilMP_S4_L001_R2_001.fastq 
 
 
-seqtk sample -s1505 oil_R2.fastq 5000000 > F2.fq
-seqtk sample -s1505 oil_R1.fastq 5000000 > F1.fq
-seqtk sample -s1505 oilMP_S4_L001_R1_001.fastq 1500000 > M1.fq
-seqtk sample -s1505 oilMP_S4_L001_R2_001.fastq 1500000 > M2.fq
+seqtk sample -s722 oil_R2.fastq 5000000 > F2.fq
+seqtk sample -s722 oil_R1.fastq 5000000 > F1.fq
+seqtk sample -s722 oilMP_S4_L001_R1_001.fastq 1500000 > M1.fq
+seqtk sample -s722 oilMP_S4_L001_R2_001.fastq 1500000 > M2.fq
 
 mkdir fastqc
 ls F* M* | xargs -tI{} fastqc -o fastqc {}
